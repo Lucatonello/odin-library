@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="layout">
+        <div class="child" id="header">
+            <h1>Library!</h1>
+        </div>
+        <div class="child" id="library">
+            <div class="unknown">
+
+            </div>
+            
+        </div>
+        <div class="child" id="addButton" onsubmit="addBookToLibrary(event)">
+            <button id="button" onclick="showForm()">Add book</button>
+            <form class="form" id="formElement" style="display: none">
+                <input class="form-option" type="text" placeholder="name" name="name" id="name">
+                <input class="form-option" type="text" placeholder="author" name="author" id="author">
+                <input class="form-option" type="number" placeholder="pages" name="pages" id="pages">
+                <div>
+                    <label class="form-option" for="read">Have you read it?</label>
+                    <div>
+                        <input class="form-option" type="radio" name="read" class="read" value="yes">Yes<br>
+                        <input class="form-option" type="radio" name="read" class="read" value="no">No<br>
+                </div>    
+                <button onclick="addItem()" class="form-option" type="button" name="submitBook">Submit</button>
+                <button onclick="closeForm()" class="form-option" type="button" name="close">x</button>
+            </form>
+        </div>
+            
+    </div>
+    
+</body>
+</html>
